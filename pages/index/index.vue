@@ -11,11 +11,10 @@
 </template>
 <script>
 export default {
-  async asyncData({ $axios }) {
-    // const listData = await $axios.$get('https://www.easy-mock.com/mock/5bd01284dfa1f337facb9fe0/example/mock')
+  async asyncData({ $axios, query }) {
+    console.log(query)
     const result = await $axios.$get('https://www.easy-mock.com/mock/5bd01284dfa1f337facb9fe0/example/query')
     let name = result.data.name
-    console.log(result.data.name)
     return { name }
   },
   data() {
@@ -29,7 +28,6 @@ export default {
       this.getUserInfo()
     },
     getUserInfo() {
-      console.log(this.$route.query)
       // this.name = this.$route.query.name
     }
   }

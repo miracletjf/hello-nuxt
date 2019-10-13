@@ -4,7 +4,7 @@
       <logo />
       <h1 class="title"> hello-nuxt </h1>
       <h2 class="subtitle"> My wonderful Nuxt.js project </h2>
-      <nuxt-child/>
+      <nuxt/>
     </div>
   </div>
 </template>
